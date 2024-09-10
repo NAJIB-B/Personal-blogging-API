@@ -13,8 +13,12 @@ const postSchema = new mongoose.Schema({
   },
   category: {
     type: String,
+    required: [true, 'A post must have a category']
   },
-  tags: [String]
+  tags:{
+    type: String,
+    required: [true, 'A post must have a category']
+  }
 }, {timestamps: true})
 
 

@@ -15,8 +15,6 @@ const DB =
 
 mongoose.connect(DB).then(() => {
   console.log("DB connection successfull");
-}).catch((err) => {
-  console.log(err)
 })
 
 app.use(express.json())
@@ -25,6 +23,15 @@ app.use('/api/v1/posts', postRouter)
 
 app.get('*', (req, res) => {
   res.status(404).send('Not found')
+})
+
+app.use((error, req, res, next) => {
+  res.status(error.statusCode || 500).json({
+    status: error.status || 'error',
+    message: error.message,
+    code: error.statusCode || 500,
+    error: error
+  })
 })
 
 const PORT = 3000;
