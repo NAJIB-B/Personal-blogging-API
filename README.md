@@ -1,35 +1,50 @@
-<h1> Personal blogging API</h1>
-<h3>This API let's you do the following:</h3>
-<ul>
-  <li>Create new blog post</li>
-  <li>Update a blog post</li>
-  <li>Get all the blog post. With this you can also specify search query to search for specific kind of posts. more details on this in the documentaion</li>
-  <li>Get a single post</li>
-  <li>Delete a post</li>
-</ul>
+<h1 align="center"> Personal blogging API</h1>
+
+# Overview
+![project architecture](https://assets.roadmap.sh/guest/blogging-platform-api.png)  
+
+  
+This is a RESTful API that powers a personal blog. It has the following features:
+
+- Return a list of articles. You can add filters for tags or a particular search term.
+- Return a single article, specified by the ID of the article.
+- Create a new article to be published.
+- Delete a single article, specified by the ID.
+- Update a single article, again, you’d specify the article using its ID.
 
 <h4>Project idea from: <a href="https://roadmap.sh/projects/blogging-platform-api">https://roadmap.sh/projects/blogging-platform-api</a></h4>
-<h2>How to run the project</h2>
-<p>Clone the project repo</p>
-<p><code>git clone https://github.com/NAJIB-B/Personal-blogging-API.git</code></p>
+<br></br>
+<h2>How to Run the Project</h2>
 
-<p>navigate into the project directory</p>
-<p><code>cd Personal-blogging-API</code></p>
+<ol>
+  <li><strong>Clone the project repo</strong></li>
+  <pre><code>git clone https://github.com/NAJIB-B/Personal-blogging-API.git</code></pre>
 
-<p>Install the dependencies</p>
-<p><code>npm install</code></p>
+  <li><strong>Navigate into the project directory</strong></li>
+  <pre><code>cd Personal-blogging-API</code></pre>
 
-<p>Create your own mongodb database (I used <a href="https://www.mongodb.com/products/platform/atlas-database">mongodb atlas</a>)</p>
-<p>create your .env file</p>
-<p><code>touch .env</code></p>
+  <li><strong>Install the dependencies</strong></li>
+  <pre><code>npm install</code></pre>
 
-<p>Create the following variables and fill it up with own details</p>
-<p><code>DATABASE="your database connection string"</code></p> <p><code>//in this format "mongodb+srv://&lt;username&gt;:&lt;password&gt;@cluster0.ojffk.mongodb.net/&lt;database name&gt;?retryWrites=true&w=majority&appName=Cluster0"</code></p>
+  <li><strong>Create your own MongoDB database</strong></li>
+  <p>(I used MongoDB Atlas)</p>
 
-  <i>NOTE: In the example string above the "&lt;password&gt;" should not be changed (meaning username, database name and cluster text should be from your own database.).</i>
-  <i>Why the password should remain like that is because it will be taken from the password field below</i>
-    
-<p><code>DATABASE_PASSWORD="your database password"</code></p>
-<p>Run the project</p>
-<code>npm start</code>
-<i></i>
+  <li><strong>Create your <code>.env</code> file</strong></li>
+  <pre><code>touch .env</code></pre>
+
+  <li><strong>Add the following environment variables</strong></li>
+  <p>Populate the <code>.env</code> file with the following variables, replacing the placeholders with your own details:</p>
+
+  <pre><code>DATABASE="mongodb+srv://&lt;username&gt;:&lt;password&gt;@cluster0.mongodb.net/&lt;database-name&gt;?retryWrites=true&amp;w=majority&amp;appName=Cluster0"
+DATABASE_PASSWORD="your-database-password"</code></pre>
+
+  <p><strong>Note:</strong></p>
+  <ul>
+    <li>Replace <code>&lt;username&gt;</code>, <code>&lt;database-name&gt;</code>, and other placeholders with the relevant details from your own MongoDB database.</li>
+    <li><strong>Do not replace</strong> the <code>&lt;password&gt;</code> placeholder in the connection string. It will be automatically substituted with the <code>DATABASE_PASSWORD</code> value you define.</li>
+  </ul>
+
+  <li><strong>Run the project</strong></li>
+  <pre><code>npm start</code></pre>
+</ol>
+
