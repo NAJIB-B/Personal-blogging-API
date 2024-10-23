@@ -12,7 +12,7 @@ This is a RESTful API that powers a personal blog. It has the following features
 - Delete a single article, specified by the ID.
 - Update a single article, again, you’d specify the article using its ID.
 
-<h4>Project idea from: <a href="https://roadmap.sh/projects/blogging-platform-api">https://roadmap.sh/projects/blogging-platform-api</a></h4>
+<h4>Project idea from: <a href="https://roadmap.sh/projects/personal-blog">https://roadmap.sh/projects/personal-blog</a></h4>
 <br></br>
 <h2>How to Run the Project</h2>
 
