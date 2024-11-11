@@ -3,3 +3,4 @@
 
 # Ignore node_module i.e dependencies
 node_modules/
+.vercel
